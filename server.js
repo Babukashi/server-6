@@ -2,6 +2,7 @@
 const kv = await Deno.openKv();
 
 await kv.set(['pokemon', 'アマルス'], { type: 'こおり', level: 30 });
+await kv.set(['pokemon', ''], { type: 'こおり', level: 30 });
 
 const pkmn = await kv.get(['pokemon', 'アマルス']);
 console.log(pkmn);
